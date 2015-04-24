@@ -1,11 +1,11 @@
 print("let's play a game!\nGuess a number between 0 and 100.\n")
 
-inp = 0             #input
-ub = 100            #upper bound
-lb = 0              #lower bound
-div = lb+(ub-lb)//2 #division
-ans = False         #answer
-nc=0                #'no' count
+inp = 0
+ub = 100
+lb = 0
+div = lb+(ub-lb)//2
+ans = False
+nc=0      
 
 while(ans!=True):
     while(inp!='y' and inp!='n'):
