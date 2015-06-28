@@ -20,7 +20,7 @@ def visit_url(url, domain):
             content_string = content.decode("utf-8")
 
             #basic page content
-            regexp_keywords = re.compile('<meta name="keywords" content="(?P<keywords>(.*))" />')
+            #regexp_keywords = re.compile('<meta name="keywords" content="(?P<keywords>(.*))" />')
             regexp_urls = re.findall(r'href="(.*?)"', content_string)
             regexp_titles = re.findall(r'title="(.*?)"', content_string)
 
@@ -28,13 +28,13 @@ def visit_url(url, domain):
             regexp_bnames = re.findall(r'>(.*?)(</a>|</div>|</span>)', content_string)#button names
             regexp_images = re.findall(r'class="image" src="(.*?)"', content_string)    #all images
             regexp_alts = re.findall(r'alt="(.*?)"', content_string) #all strings starting with 'alt' tag
-            
+            '''
             result = regexp_keywords.search(content_string, re.IGNORECASE)  #do not delete
 
             if result:
                 keywords = result.group("keywords")
                 print("\nKeywords:\n" + keywords)
-
+'''
             print("\nLinks:")
             for url in regexp_urls:
                 print(url)

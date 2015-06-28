@@ -1,6 +1,6 @@
 import pickle
 
-name = input("Please inout your name: ")
+name = input("Please input your name: ")
 age = input("Please input your age: ")
 country = input("Please input your country of origin: ")
 
